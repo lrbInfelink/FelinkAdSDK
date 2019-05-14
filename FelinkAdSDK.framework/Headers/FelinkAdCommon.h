@@ -1,0 +1,56 @@
+//
+//  FelinkCommon.h
+//  felinkSDK
+//
+//  Created by 刘瑞彬 on 2019/3/4.
+//  Copyright © 2019年 刘瑞彬. All rights reserved.
+//
+
+/**
+ *  广告展示失败类型枚举
+ */
+typedef enum _FelinkAdFailReason {
+    //其它错误
+    FelinkAdFailReason_NONE = 0,
+    
+    //应用程序ID 没有设置
+    FelinkAdFailReason_AppID = 100,
+    
+    //网络或其它异常
+    FelinkAdFailReason_NETWORK = 101,
+    
+    
+    //超时
+    FelinkAdFailReason_TIMEOUT = 103,
+    
+    //请求异常
+    FelinkAdFailReason_EXCEPTION = 102,
+    
+    //没有推广返回
+    FelinkAdFailReason_NONE_AD,
+    
+    //广告尺寸异常，不显示广告
+    FelinkAdFailReason_FRAME
+   
+} FelinkAdFailReason;
+
+
+
+/**
+ *  banner广告展示样式 （以宽度为基准）
+ */
+typedef NS_ENUM(NSInteger, FelinkAdBannerStyle) {
+    //服务端制定
+    FelinkAdBannerStyle_Server = 0,
+    //客户端制定
+    FelinkAdBannerStyle_Client = 1,
+};
+
+
+
+
+#define FelinkAd_Direct_deepLink  @"deepLink"
+#define FelinkAd_Direct_clickUrl  @"clickUrl"
+#define FelinkAd_Direct_extFields  @"extFields"
+
+
