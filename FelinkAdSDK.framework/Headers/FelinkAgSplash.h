@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "FelinkAdRequest.h"
 #import "FelinkAdCommon.h"
 
 
@@ -42,7 +41,7 @@
 
 @end
 
-@interface FelinkAgSplash : FelinkAdRequest
+@interface FelinkAgSplash : NSObject
 @property (nonatomic ,weak) id<FelinkAgSplashDelegate> delegate;
 
 /**

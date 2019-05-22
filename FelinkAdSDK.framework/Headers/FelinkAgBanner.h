@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "FelinkAdRequest.h"
 #import "FelinkAdCommon.h"
 
 @class FelinkAgBanner;
@@ -45,7 +44,7 @@
 @end
 
 
-@interface FelinkAgBanner : FelinkAdRequest
+@interface FelinkAgBanner : NSObject
 @property (nonatomic ,weak) id<FelinkAgBannerDelegate> delegate;
 
 /**
@@ -72,6 +71,11 @@
  *  banner 真实大小
  */
 @property (nonatomic,readonly,assign) CGSize bannerSize;
+
+/**
+ * 广告正在请求中
+ */
+@property (nonatomic,readonly,assign) BOOL adRequesting;
 
 /**
  初值
