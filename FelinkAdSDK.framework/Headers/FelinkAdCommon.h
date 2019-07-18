@@ -31,7 +31,7 @@ typedef enum _FelinkAdFailReason {
     
     //广告尺寸异常，不显示广告
     FelinkAdFailReason_FRAME
-   
+    
 } FelinkAdFailReason;
 
 
@@ -39,18 +39,23 @@ typedef enum _FelinkAdFailReason {
 /**
  *  banner广告展示样式 （以宽度为基准）
  */
-typedef NS_ENUM(NSInteger, FelinkAdBannerStyle) {
+typedef NS_ENUM(NSInteger, FelinkAdSizeStyle) {
     //服务端制定
-    FelinkAdBannerStyle_Server = 0,
+    FelinkAdSizeStyle_Server = 0,
     //客户端制定
-    FelinkAdBannerStyle_Client = 1,
+    FelinkAdSizeStyle_Client = 1,
 };
 
+typedef NS_ENUM(NSInteger, FelinkAdMaterialType) {
+    // 一般图文或图片广告
+    FelinkAdMaterialType_NORMAL = 0,
+    // 视频广告，需开发者增加播放器支持
+    FelinkAdMaterialType_VIDEO = 1,
+    // 浏览器 也是模版
+    FelinkAdMaterialType_HTML = 2,
+};
 
-
-
-#define FelinkAd_Direct_deepLink  @"deepLink"
-#define FelinkAd_Direct_clickUrl  @"clickUrl"
+#define FelinkAd_Direct_adid       @"adid"
+#define FelinkAd_Direct_deepLink   @"deepLink"
+#define FelinkAd_Direct_clickUrl   @"clickUrl"
 #define FelinkAd_Direct_extFields  @"extFields"
-
-

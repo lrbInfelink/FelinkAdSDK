@@ -39,7 +39,7 @@
 // 广告跳到用户处理 若开发者处理改事件 返回YES；否则返回 NO，SDK会处理
 - (BOOL)felinkAdBannerDirectClicked:(FelinkAgBanner *)ad data:(NSDictionary *)data;
 
-//用户关闭广告  若开发者处理改事件 返回YES；否则返回 NO，SDK会处理
+//用户关闭广告  若开发者处理该事件 返回YES；否则返回 NO，SDK会处理
 - (BOOL)felinkAdBannerDidClose:(FelinkAgBanner *)ad;
 @end
 
@@ -60,7 +60,7 @@
 /**
  *  banner 填充方式
  */
-@property (nonatomic,assign) FelinkAdBannerStyle bannerStyle;
+@property (nonatomic,assign) FelinkAdSizeStyle sizeStyle;
 
 /**
  *  bannerView 高度是否适应广告大小，默认YES
@@ -82,7 +82,7 @@
 
  @param adPid 广告位
  @param timeout 请求数据超时 建议5秒
- @param size  广告展示区域 推荐 (宽/高)  640:100    640:320     600:500
+ @param size  广告展示区域 推荐 (宽/高)   320:50    320:160     300:250
  @return <#return value description#>
  */
 -(instancetype)initWithAdPid:(NSString *)adPid timeout:(NSTimeInterval)timeout size:(CGSize)size;
@@ -98,6 +98,7 @@
  @param controller <#controller description#>
  */
 - (void)showInView:(UIView *)bannerView controller:(UIViewController *)controller;
+
 
 @end
 
