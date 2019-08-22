@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FelinkAdSDK'
-  s.version          = '1.1.5'
+  s.version          = '1.1.6'
   s.summary          = 'FelinkAdSDK.'
   s.platform     = :ios,'8.0'
 # This description is used to generate tags and improve search results.
@@ -31,12 +31,11 @@ TODO: Add long description of the pod here.
   s.resource_bundles = {'FelinkAdSDK' => ['FelinkAdSDK.bundle/*']}
   s.resource = 'thirdparty/BaiduMobAdsSDK/baidumobadsdk.bundle'
   s.vendored_frameworks = ['thirdparty/BaiduMobAdsSDK/BaiduMobAdSDK.framework','FelinkAdSDK.framework']
-  
-  s.dependency 'SDWebImage'
+  s.framework = ['MessageUI']
+  s.dependency 'YYWebImage'
   s.dependency 'OpenUDID'
   s.dependency 'YYModel'
   s.dependency 'GDTMobSDK'         # 广点通SDK广告
-  s.dependency 'Google-Mobile-Ads-SDK', '~> 7.30.0'
   s.dependency 'Masonry'
   s.dependency 'Bytedance-UnionAD'
 end
