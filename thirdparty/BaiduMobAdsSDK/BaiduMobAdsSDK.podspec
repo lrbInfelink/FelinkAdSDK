@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BaiduMobAdsSDK"
-  s.version      = "4.46"
+  s.version      = "4.67"
   s.summary      = "A short description of BaiduMobAdsSDK."
 
   # This description is used to generate tags and improve search results.
