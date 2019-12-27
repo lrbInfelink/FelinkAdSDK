@@ -59,6 +59,11 @@
 @property (nonatomic, weak) UIViewController *viewController;
 
 
+/**
+ * hidesBottomBarWhenPushed  等
+ *只对风灵自己广告有效，对第三方SDK无效
+ */
+@property (nonatomic, strong) NSDictionary *extraProperties;
 
 
 /**

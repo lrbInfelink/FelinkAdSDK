@@ -61,6 +61,12 @@
 @property (nonatomic,readonly,copy) NSString* adPid;
 
 /**
+ * hidesBottomBarWhenPushed  等
+ *只对风灵自己广告有效，对第三方SDK无效
+ */
+@property (nonatomic, strong) NSDictionary *extraProperties;
+
+/**
  初值
  
  @param adPid 广告位
