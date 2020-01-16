@@ -38,4 +38,8 @@ TODO: Add long description of the pod here.
   s.dependency 'GDTMobSDK'         # 广点通SDK广告
   s.dependency 'Masonry'
   s.dependency 'Bytedance-UnionAD'
+  valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
+  s.xcconfig = {
+    'VALID_ARCHS' =>  valid_archs.join(' '),
+  }
 end
