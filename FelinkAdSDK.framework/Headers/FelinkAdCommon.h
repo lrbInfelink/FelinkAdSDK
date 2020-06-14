@@ -27,10 +27,12 @@ typedef enum _FelinkAdFailReason {
     FelinkAdFailReason_EXCEPTION = 102,
     
     //没有推广返回
-    FelinkAdFailReason_NONE_AD,
+    FelinkAdFailReason_NONE_AD = 104,
+    //没有配置广告主
+    FelinkAdFailReason_NONE_ADHOST = 105,
     
     //广告尺寸异常，不显示广告
-    FelinkAdFailReason_FRAME
+    FelinkAdFailReason_FRAME = 106
     
 } FelinkAdFailReason;
 

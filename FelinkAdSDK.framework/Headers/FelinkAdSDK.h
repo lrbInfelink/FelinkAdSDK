@@ -18,4 +18,5 @@
 +(void)initAppID:(NSString *)appID;
 +(instancetype)shareInstance;
 +(void)setDebug:(BOOL)debug;
++(NSString *)sdkVersion;
 @end
