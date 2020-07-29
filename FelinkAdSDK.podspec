@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FelinkAdSDK'
-  s.version          = '1.7.3'
+  s.version          = '1.7.4'
   s.summary          = 'FelinkAdSDK.'
   s.platform     = :ios,'8.0'
 # This description is used to generate tags and improve search results.
