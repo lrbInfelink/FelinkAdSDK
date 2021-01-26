@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.resource_bundles = {'FelinkAdSDK' => ['FelinkAdSDK.bundle/*']}
   s.resource = 'thirdparty/BaiduMobAdsSDK/baidumobadsdk.bundle'
   s.vendored_frameworks = ['thirdparty/BaiduMobAdsSDK/BaiduMobAdSDK.framework','FelinkAdSDK.framework']
-  s.framework = ['MessageUI']
+  s.framework = ['MessageUI','SafariServices']
   s.dependency 'YYWebImage'
   s.dependency 'OpenUDID'
   s.dependency 'YYModel'
