@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BaiduMobAdsSDK"
-  s.version      = "4.67"
+  s.version      = "4.74"
   s.summary      = "A short description of BaiduMobAdsSDK."
 
   # This description is used to generate tags and improve search results.
@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  # s.framework  = "SafariServices"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"

@@ -9,9 +9,16 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.67"
+#define SDK_VERSION_IN_MSSP @"4.74"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
+
+typedef enum {
+    BaiduMobAdTypeFeed = 0, // 默认 请求普通信息流广告
+    BaiduMobAdTypePortrait = 1,  // 竖版小视频广告
+    BaiduMobAdTypeRewardVideo = 2,  // 激励视频
+    BaiduMobAdTypeFullScreenVideo = 3   // 全屏视频
+} BaiduMobAdType;
 
 typedef enum {
     NORMAL, // 一般图文或图片广告
@@ -87,7 +94,7 @@ typedef NS_ENUM(NSInteger, BaiduMobAdSmartFeedStyleType) {
     FeedType_RIGHT_PIC = 34,//右图左文
     FeedType_GROUP_PIC = 35,//三图图文
     FeedType_GROUP_PIC_LOGO = 36,//三图图文+logo
-    FeedType_VIDEO_TOP_TITLE = 37//视频+文字 暂不支持智能优选模板渲染
+    FeedType_VIDEO_TOP_TITLE = 37//视频+文字
 };
 
 /**
@@ -127,3 +134,6 @@ typedef NS_ENUM(NSInteger, BaiduMobAdSmartFeedSizeType) {
 #define CPU_CHANNEL_CULTURE         @"1036" //文化
 
 #endif
+
+#define BaiduMobAdDEPRECATED_MSG(instead) DEPRECATED_MSG_ATTRIBUTE(instead)
+#define BaiduMobAdDEPRECATED DEPRECATED_ATTRIBUTE

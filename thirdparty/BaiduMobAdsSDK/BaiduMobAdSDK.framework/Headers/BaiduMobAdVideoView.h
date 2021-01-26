@@ -8,17 +8,32 @@
 
 #import <UIKit/UIKit.h>
 #import "BaiduMobAdCommonConfig.h"
+#import <AVFoundation/AVFoundation.h>
 
 @class BaiduMobAdVideoView;
 @protocol BaiduMobAdVideoViewDelegate <NSObject>
 @optional
 
 /**
- 视频准备开始播放（首帧）
+ 视频准备开始播放
  
  @param videoView self
  */
 - (void)fullscreenVideoAdDidStartPlaying:(BaiduMobAdVideoView *)videoView;
+
+/**
+ 视频暂停播放
+ 
+ @param videoView self
+ */
+- (void)fullscreenVideoAdDidPause:(BaiduMobAdVideoView *)videoView;
+
+/**
+ 视频重播
+ 
+ @param videoView self
+ */
+- (void)fullscreenVideoAdDidReplay:(BaiduMobAdVideoView *)videoView;
 
 /**
  视频播放完成
@@ -62,6 +77,11 @@
 - (instancetype)initWithFrame:(CGRect)frame andObject:(id)object;
 
 /**
+ 设置AVAudioSessionCategory，play之前调用，默认：AVAudioSessionCategoryAmbient
+ */
+- (void)setAudioSessionCategory:(AVAudioSessionCategory)category;
+
+/**
  开始播放
  */
 - (void)play;
@@ -80,6 +100,16 @@
  销毁播放器
  */
 - (void)stop;
+
+/**
+ 显示暂停按钮，暂停时自动显示
+ */
+- (void)showPauseButton;
+
+/**
+ 隐藏暂停按钮，播放时自动隐藏
+ */
+- (void)hiddenPauseButton;
 
 /**
  设置静音
@@ -119,6 +149,6 @@
 /**
  视频曝光事件 已废弃，无需开发者发送
  */
-- (void)trackImpression DEPRECATED_MSG_ATTRIBUTE("已废弃，无需开发者发送");
+- (void)trackImpression BaiduMobAdDEPRECATED_MSG("已废弃，无需开发者发送");
 
 @end
