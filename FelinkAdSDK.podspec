@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FelinkAdSDK'
-  s.version          = '1.8.4'
+  s.version          = '2.0.0'
   s.summary          = 'FelinkAdSDK.'
   s.platform     = :ios,'9.0'
 # This description is used to generate tags and improve search results.
@@ -37,10 +37,6 @@ TODO: Add long description of the pod here.
   s.dependency 'YYModel'
   s.dependency 'GDTMobSDK'         # 广点通SDK广告
   s.dependency 'Masonry'
-  s.dependency 'Bytedance-UnionAD'
   s.dependency 'TATMediaSDK'
-  valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
-  s.xcconfig = {
-    'VALID_ARCHS' =>  valid_archs.join(' '),
-  }
+  s.dependency 'Ads-CN'
 end
