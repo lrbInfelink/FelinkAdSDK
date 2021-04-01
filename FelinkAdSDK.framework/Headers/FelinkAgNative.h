@@ -36,6 +36,8 @@
 // 广告跳到用户处理 若开发者处理该事件 返回YES；否则返回 NO，SDK会处理
 - (BOOL)felinkAdNativeDirectClicked:(FelinkAgNative *)ad data:(NSDictionary *)data;
 
+//用户关闭广告
+- (void)felinkAdNativeDidClose:(FelinkAgNative *)ad nativeObject:(FelinkAgNativeObject *)nativeObject;
 @end
 
 @interface FelinkAgNative : NSObject
