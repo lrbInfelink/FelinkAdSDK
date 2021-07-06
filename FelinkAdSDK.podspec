@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FelinkAdSDK'
-  s.version          = '2.1.2'
+  s.version          = '2.2.0'
   s.summary          = 'FelinkAdSDK.'
   s.platform     = :ios,'9.0'
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
   s.resource_bundles = {'FelinkAdSDK' => ['FelinkAdSDK.bundle/*']}
   s.resource = 'thirdparty/BaiduMobAdsSDK/baidumobadsdk.bundle'
-  s.vendored_frameworks = ['thirdparty/BaiduMobAdsSDK/BaiduMobAdSDK.framework','FelinkAdSDK.framework','thirdparty/KSAdSDKFull/KSAdSDK.framework']
+  s.vendored_frameworks = ['thirdparty/BaiduMobAdsSDK/BaiduMobAdSDK.framework','FelinkAdSDK.framework']
   s.framework = ['Foundation', 'UIKit', 'MobileCoreServices', 'CoreGraphics', 'Security', 'SystemConfiguration', 'CoreTelephony', 'AdSupport', 'CoreData', 'StoreKit', 'AVFoundation', 'MediaPlayer', 'CoreMedia', 'WebKit', 'Accelerate', 'CoreLocation', 'AVKit', 'MessageUI', 'QuickLook', 'AudioToolBox','SafariServices']
   s.libraries = ['z', 'resolv.9', 'sqlite3', 'c++', 'c++abi']
   s.dependency 'YYWebImage'
@@ -38,6 +38,7 @@ TODO: Add long description of the pod here.
   s.dependency 'YYModel'
   s.dependency 'GDTMobSDK'         # 广点通SDK广告
   s.dependency 'Masonry'
+  s.dependency 'KSAdSDK'
   s.dependency 'TATMediaSDK'
   s.dependency 'Ads-CN'
 end
