@@ -41,4 +41,5 @@ TODO: Add long description of the pod here.
   s.dependency 'KSAdSDK'
   s.dependency 'TATMediaSDK'
   s.dependency 'Ads-CN'
+  s.xcconfig = {'VALID_ARCHS' => 'arm64 arm7 x86_64'}
 end
