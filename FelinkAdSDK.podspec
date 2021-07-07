@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FelinkAdSDK'
-  s.version          = '2.3.1'
+  s.version          = '2.3.2'
   s.summary          = 'FelinkAdSDK.'
   s.platform     = :ios,'9.0'
 # This description is used to generate tags and improve search results.
@@ -41,5 +41,4 @@ TODO: Add long description of the pod here.
   s.dependency 'KSAdSDK'
   s.dependency 'TATMediaSDK'
   s.dependency 'Ads-CN'
-  s.xcconfig = {'VALID_ARCHS' => 'arm64 arm7 x86_64 i386'}
 end
