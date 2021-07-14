@@ -19,4 +19,8 @@
 +(instancetype)shareInstance;
 +(void)setDebug:(BOOL)debug;
 +(NSString *)sdkVersion;
++ (void)showAdTrackAlertInNeed:(BOOL)debug;
+//广告个性化
++ (void)setPersonalAd:(BOOL)personal;
++ (BOOL)getPersonalAd;
 @end
