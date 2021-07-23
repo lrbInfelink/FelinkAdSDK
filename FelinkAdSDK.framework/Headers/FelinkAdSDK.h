@@ -14,6 +14,7 @@
 #import "FelinkAgNative.h"
 #import "FelinkAgRewardVideo.h"
 #import "FelinkAgInterstitial.h"
+#import "FelinkAgNativeView.h"
 @interface FelinkAdSDK : NSObject
 +(void)initAppID:(NSString *)appID;
 +(instancetype)shareInstance;
