@@ -112,6 +112,11 @@
  */
 -(BOOL)isAdValid;
 
+/**
+ * 广告大小 仅做参考
+ *
+ */
+@property (nonatomic, assign,readonly)CGSize adSize;
 
 @end
 
