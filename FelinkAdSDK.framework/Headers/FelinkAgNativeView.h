@@ -17,6 +17,7 @@ typedef  void   (^FelinkAgNativeViewClose)(NSObject *object);
 /// 描述字体
 @property (nonatomic, strong) UIFont *descFont;
 @property (nonatomic, assign) BOOL autoUpdate;
+@property (nonatomic, strong) UIButton *closeBtn;
 - (void)beforeRegisterAd:(FelinkAgNativeObject *)ad;
 - (void)afterRegisterAd:(FelinkAgNativeObject *)ad;
 

@@ -11,7 +11,7 @@
 @interface FelinkAgNativeObject : NSObject
 //获取该原生广告是否为三小图广告，当为三小图广告时，可以通过morePictures获取三张图片资源供渲染
 @property (assign, nonatomic) FelinkAdMaterialType materialType;
-
+@property (copy,readonly,nonatomic)  NSString *identifier;
 @property (assign,readonly,nonatomic)  NSInteger index;
 
 /**
@@ -101,6 +101,11 @@
  * 可能对象将被篡改  使用时注意
  */
 @property (nonatomic, strong) UIImageView *adLogoView;
+
+/**
+ 是否有关闭广告按钮
+ */
+@property (nonatomic, assign) BOOL hasCloseButton;
 /*
  *
  * 如果是风灵广告，返回相关信息
