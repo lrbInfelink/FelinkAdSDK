@@ -20,7 +20,8 @@
 
 //大图完成加载 该方法不一定被回调;同一个nativeObject，可能一次调用都没有，也可能多次被调用
 - (void)felinkAdNativeDidLoadMainImage:(FelinkAgNative *)ad nativeObject:(FelinkAgNativeObject *)nativeObject;
-
+//大图加载失败或失败渲染广告控件 该方法不一定被回调;同一个nativeObject，可能一次调用都没有，也可能多次被调用
+- (void)felinkAdNativeFailureMainImage:(FelinkAgNative *)ad nativeObject:(FelinkAgNativeObject *)nativeObject error:(NSError *)error;
 //成功展示广告
 - (void)felinkAdNativeSuccessPresentScreen:(FelinkAgNative *)ad;
 

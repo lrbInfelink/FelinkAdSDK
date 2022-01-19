@@ -22,6 +22,7 @@ typedef  void   (^FelinkAgNativeViewClose)(NSObject *object);
 - (void)afterRegisterAd:(FelinkAgNativeObject *)ad;
 
 - (void)showCloseButtonWithAction:(FelinkAgNativeViewClose)action;
+- (bool)syncSize;
 @end
 
 NS_ASSUME_NONNULL_END
