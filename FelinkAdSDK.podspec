@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FelinkAdSDK'
-  s.version          = '2.8.2'
+  s.version          = '2.9.0'
   s.summary          = 'FelinkAdSDK.'
-  s.platform     = :ios,'9.0'
+  s.platform     = :ios,'13.0'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -27,7 +27,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/lrbInfelink/FelinkAdSDK.git', :tag => s.version }
 
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '13.0'
   s.resource_bundles = {'FelinkAdSDK' => ['FelinkAdSDK.bundle/*']}
   s.resource = 'thirdparty/BaiduMobAdsSDK/baidumobadsdk.bundle'
   s.vendored_frameworks = ['thirdparty/BaiduMobAdsSDK/BaiduMobAdSDK.framework','FelinkAdSDK.framework']
@@ -40,5 +40,6 @@ TODO: Add long description of the pod here.
   s.dependency 'Masonry'
   s.dependency 'KSAdSDK'
   s.dependency 'TATMediaSDK'
-  s.dependency 'Ads-CN'
+  #s.dependency 'Ads-CN'
+  s.dependency 'Ads-CN/BUAdSDK_Compatible'
 end
