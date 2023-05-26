@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FelinkAdSDK'
-  s.version          = '2.8.2'
-  s.summary          = 'FelinkAdSDK.'
-  s.platform     = :ios,'9.0'
+  s.version          = '2.9.0'
+  s.summary          = 'A short description of FelinkAdSDK.'
+
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -22,23 +22,32 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/lrbInfelink/FelinkAdSDK'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'liuruibin' => 'liuruibin@felink.com' }
-  s.source           = { :git => 'https://github.com/lrbInfelink/FelinkAdSDK.git', :tag => s.version }
+  s.author           = { 'liyouleo911' => 'liuruibin@felink.com' }
+  s.source           = { :git => 'https://github.com/lrbInfelink/FelinkAdSDK.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
+  s.ios.deployment_target = '13.0'
+  s.source_files = 'FelinkAdSDK/Classes/**/*'
+  
+  s.resource_bundles = {
+    'FelinkAdSDK' => ['FelinkAdSDK/Assets/*.png']
+  }
 
-  s.ios.deployment_target = '9.0'
-  s.resource_bundles = {'FelinkAdSDK' => ['FelinkAdSDK.bundle/*']}
-  s.resource = 'thirdparty/BaiduMobAdsSDK/baidumobadsdk.bundle'
-  s.vendored_frameworks = ['thirdparty/BaiduMobAdsSDK/BaiduMobAdSDK.framework','FelinkAdSDK.framework']
-  s.framework = ['Foundation', 'UIKit', 'MobileCoreServices', 'CoreGraphics', 'Security', 'SystemConfiguration', 'CoreTelephony', 'AdSupport', 'CoreData', 'StoreKit', 'AVFoundation', 'MediaPlayer', 'CoreMedia', 'WebKit', 'Accelerate', 'CoreLocation', 'AVKit', 'MessageUI', 'QuickLook', 'AudioToolBox','SafariServices']
-  s.libraries = ['z', 'resolv.9', 'sqlite3', 'c++', 'c++abi']
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.framework = ["Foundation", "UIKit", "MobileCoreServices", "CoreGraphics", "Security", "SystemConfiguration", "CoreTelephony", "AdSupport", "CoreData", "StoreKit", "AVFoundation", "MediaPlayer", "CoreMedia", "WebKit", "Accelerate", "CoreLocation", "AVKit", "MessageUI", "QuickLook", "AudioToolBox","SafariServices"]
+  s.libraries = ["z", "resolv.9", "sqlite3", "c++", "c++abi"]
   s.dependency 'YYWebImage'
   s.dependency 'OpenUDID'
   s.dependency 'YYModel'
-  s.dependency 'GDTMobSDK'         # 广点通SDK广告
+  s.dependency 'GDTMobSDK'
+  #s.dependency 'TATMediaSDK'
+  #s.dependency 'KSAdSDK'
+  # s.dependency 'Google-Mobile-Ads-SDK'
   s.dependency 'Masonry'
-  s.dependency 'KSAdSDK'
-  s.dependency 'TATMediaSDK'
-  s.dependency 'Ads-CN'
+  #s.dependency 'Ads-CN'
+  s.dependency 'Ads-CN/BUAdSDK_Compatible'
+
 end
+
