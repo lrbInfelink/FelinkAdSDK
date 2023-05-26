@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FelinkAdSDK'
-  s.version          = '2.9.0'
+  s.version          = '3.0.2'
   s.summary          = 'A short description of FelinkAdSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/lrbInfelink/FelinkAdSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '9.0'
   s.source_files = 'FelinkAdSDK/Classes/**/*'
   
   s.resource_bundles = {
