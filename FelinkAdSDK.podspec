@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FelinkAdSDK'
-  s.version          = '3.1.0'
+  s.version          = '3.1.2'
   s.summary          = 'A short description of FelinkAdSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -27,11 +27,8 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/lrbInfelink/FelinkAdSDK.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '13.0'
-  s.source_files = 'FelinkAdSDK/Classes/**/*'
-  
-  s.resource_bundles = {
-    'FelinkAdSDK' => ['FelinkAdSDK/Assets/*.png']
-  }
+  s.resource_bundles = {'FelinkAdSDK' => ['FelinkAdSDK.bundle/*']}
+  s.vendored_frameworks = ['FelinkAdSDK.framework']
   s.framework = ["Foundation", "UIKit", "MobileCoreServices", "CoreGraphics", "Security", "SystemConfiguration", "CoreTelephony", "AdSupport", "CoreData", "StoreKit", "AVFoundation", "MediaPlayer", "CoreMedia", "WebKit", "Accelerate", "CoreLocation", "AVKit", "MessageUI", "QuickLook", "AudioToolBox","SafariServices"]
   s.libraries = ["z", "resolv.9", "sqlite3", "c++", "c++abi"]
   s.dependency 'YYWebImage'
